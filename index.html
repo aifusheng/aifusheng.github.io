@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<meta http-equiv="content-type"content="text/html;charset=utf-8">
+		<title>title</title>
+		<base href="http://yeching.info" />
+		<link rel="stylesheet" type="text/css" href=""/>	
+		<style type="text/css"></style>
+	</head>
+	<body>
+		<div>
+			<form method="" action="" >
+				<label for="username">用户名：</label>
+				<input type="text"  name="username"  value="用户名"  id="username"/><!--text fields-->
+				</br>
+				密码：<!--注意与用户名的不一样-->
+				<input type="password"  name="password" id="password"/><!--password fields-->
+				</br>
+				你喜欢使用什么交通工具？</br>
+				<input type="checkbox" name="bike"/>bike
+				<input type="checkbox" name="car"/>car
+				<input type="checkbox" name="train"/>train
+				</br>
+				你的性别？</br>
+				<input type="radio" name="sex"/>male
+				<input type="radio" name="sex"/>female
+				</br>
+				<label for="text_field">联系我们：</label></br>
+				<textarea row="10" cols="30" id="text_field">在这里输入内容...</textarea>
+				</br>
+				喜欢的车？</br>	
+				<select name="cars" multiple="multiple">
+					<option value="volvo" >volvo</option>
+					<option value="benz" selected="selected" >benz</option>
+					<option value="audo" >audi</option>
+				</select>
+				</br>	
+				爱好：</br>
+				<select name="hobby">
+					<option value="读书" >读书</option>
+					<option value="音乐" selected="selected" >音乐</option>
+					<option value="运动" >运动</option>
+				</select>
+				</br>
+				<input type="reset" name="reset" value="重置"/>
+				<input type="submit" name="submit" value="提交"/>
+			</form>
+			<h2>
+			问题：最终如何设置api与后端实现交互？			
+			</h2>
+		</div>
+	</body>
+</html>
