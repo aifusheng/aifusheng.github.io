@@ -1,0 +1,42 @@
+body {background-image:url(../images/bg.jpg);background-repeat: repeat-x;background-size:cover;}
+.logo{width:600px;margin:200px auto;padding:10px;border:2px solid #fff;border-radius:25px;}
+.site_name{
+	width:400px;	
+	margin:0 auto;
+	border-bottom:4px solid #fff;
+	color:#F4A460;
+	padding:10px 20px;
+	font-size:250%;
+	font-style:italic;
+	font-weight:bold;
+}
+.me{
+	margin:10px 0;
+	padding:10px 20px;
+	font-size:150%;
+	border-bottom:4px solid #fff;
+	color:#FA8C35;
+	font-weight:bold;
+}
+.nav{
+	
+	list-style:none;
+	border:2px solid #F3E5A1;
+	padding-bottom:10px;
+	border-radius:15px;
+	}
+.nav li{
+	display:inline-block;
+	color:#fff;
+	font-size:150%;
+	line-height:40px;
+	
+}
+.nav li a:link,a:visited{
+	text-decoration:none;
+	color:#F4A460;}
+.nav li a:hover,a:active{
+	color:#fff;
+	font-style:italic;
+	font-weight:bold;}
+
