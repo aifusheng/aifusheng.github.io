@@ -93,13 +93,13 @@ border:1px solid #F5F5F5;
 border-radius:10px;}
 
 .mid h1{border-bottom:2px solid #DADADE;}
-.mid li{border-bottom:1px dashed #A99EFC;padding:5px}
+.mid li{border-bottom:1px dashed #A99EFC;padding:5px;border-left:4px solid #A99EFC;}
 .mid li span{
 	color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
 	margin-right:20px;
-	border-left:4px solid #A99EFC;
+	
 }
 .mid li a:link,a:visited{
 text-decoration: none;
