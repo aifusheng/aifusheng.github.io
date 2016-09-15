@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>导航栏</title>
+	<style>
+	*{margin:0;padding:0;}
+	h3{margin:20px;}
+	ul{margin:20px;list-style-type:none;}
+
+
+	.l1
+	{
+	display:inline;
+	}
+	.l1 a:link,.l1 a:visited
+	{
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#B8860B;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	}
+	.l1 a:hover,.l1 a:active
+	{
+	background-color:#FF8C00;
+	}
+
+
+	.l2
+	{
+	display:inline;
+	}
+	.l2 a:link,.l2 a:visited
+	{
+	display:inline-block;
+	width:100px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#B8860B;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	}
+	.l2 a:hover,.l2 a:active
+	{
+	background-color:#FF8C00;
+	}
+
+
+	.l3
+	{
+	float:left;
+	}
+	.l3 a:link,.l3 a:visited
+	{
+	display:block;
+	width:100px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#B8860B;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	}
+	.l3 a:hover,.l3 a:active
+	{
+	background-color:#FF8C00;
+	}
+
+
+	.l4 a:link,.l4 a:visited
+	{
+	display:block;
+	width:100px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#B8860B;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	}
+	.l4 a:hover,.l4 a:active
+	{
+	background-color:#FF8C00;
+	}
+
+.clear{clear:both;}
+	</style>
+</head>
+<body>
+<h3>1.水平导航栏一:不同尺寸的链接,中间带有间距</h3>
+<ul>
+<li class="l1"><a href="#">Home</a></li>
+<li class="l1"><a href="#">News</a></li>
+<li class="l1"><a href="#">Contact</a></li>
+<li class="l1"><a href="#">About</a></li>
+</ul>
+<h3>2.水平导航栏二:相同尺寸的链接,中间带有间距</h3>
+<ul>
+<li class="l2"><a href="#">Home</a></li>
+<li class="l2"><a href="#">News</a></li>
+<li class="l2"><a href="#">Contact</a></li>
+<li class="l2"><a href="#">About</a></li>
+</ul>
+<h3>3.水平导航栏三:相同尺寸的链接,中间不带间距</h3>
+<ul>
+<li class="l3"><a href="#">Home</a></li>
+<li class="l3"><a href="#">News</a></li>
+<li class="l3"><a href="#">Contact</a></li>
+<li class="l3"><a href="#">About</a></li>
+</ul>
+<h3 class="clear">4.垂直导航栏</h3>
+<ul>
+<li class="l4"><a href="#">Home</a></li>
+<li class="l4"><a href="#">News</a></li>
+<li class="l4"><a href="#">Contact</a></li>
+<li class="l4"><a href="#">About</a></li>
+</ul>
+</body>
+</html>

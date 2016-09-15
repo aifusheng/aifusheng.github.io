@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>导航栏的学习</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>导航栏</h1>
+		<p></p>
+		<h2>1.导航栏的实现</h2>	
+		<p>先看看效果图</p>	
+		<img src="../images/nav.png">
+		<a href="../demo/nav/nav-demo.html">查看演示</a>
+		<a href="../demo/nav/nav-demo.html.zip">下载源码</a>
+		<br/>
+		<p>导航栏基本上是一个链接列表，因此可以使用ul 和 li元素。设置list-style-type:none样式可以删除圆点，导航栏不需要列表项标记。设置display:block 样式可以把链接显示为块元素，从而可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。创建水平导航栏的方法有两种，一般使用行内（display:inline;）或浮动列表项（float:left;）。两种方法都不错，但是如果您希望链接拥有相同的尺寸，就必须使用浮动方法。</p>
+		<p>下面是css源代码：</p>
+		<pre data-lang="css"><code class="language-css">*{margin:0;padding:0;}
+h3{margin:20px;}
+ul{margin:20px;list-style-type:none;}
+
+
+.l1
+{
+/*display:inline;默认地li元素是块元素。在这里，我们去除了每个列表项前后的换行，
+以便让它们在一行中显示。*/
+display:inline;
+}
+.l1 a:link,.l1 a:visited
+{
+font-weight:bold;
+color:#ffffff;
+background-color:#B8860B;
+text-align:center;
+padding:6px;
+text-decoration:none;
+}
+.l1 a:hover,.l1 a:active
+{
+background-color:#FF8C00;
+}
+
+
+.l2
+{
+display:inline;
+}
+.l2 a:link,.l2 a:visited
+{
+display:inline-block;
+width:100px;
+font-weight:bold;
+color:#ffffff;
+background-color:#B8860B;
+text-align:center;
+padding:6px;
+text-decoration:none;
+}
+.l2 a:hover,.l2 a:active
+{
+background-color:#FF8C00;
+}
+
+
+.l3
+{
+/*float:left;使用 float 来把块元素滑向彼此。*/
+float:left;
+}
+.l3 a:link,.l3 a:visited
+{
+display:block;
+width:100px;
+font-weight:bold;
+color:#ffffff;
+background-color:#B8860B;
+text-align:center;
+padding:6px;
+text-decoration:none;
+}
+.l3 a:hover,.l3 a:active
+{
+background-color:#FF8C00;
+}
+
+
+.l4 a:link,.l4 a:visited
+{
+/*display:block;把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。*/
+display:block;
+width:100px;
+font-weight:bold;
+color:#ffffff;
+background-color:#B8860B;
+text-align:center;
+padding:6px;
+text-decoration:none;
+}
+.l4 a:hover,.l4 a:active
+{
+background-color:#FF8C00;
+}
+
+.clear{clear:both;}
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>

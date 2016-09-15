@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>		
+<meta http-equiv="content-type"content="text/html;charset=utf-8">
+<title>animate</title>
+<style>
+*{margin:0;padding:0;}
+body{margin:20px;}
+div{margin:20px;}
+.box-shadow1{width:100px;height:40px;background:#888;box-shadow:5px 5px rgba(88,88,88,1);}
+.box-shadow2{width:100px;height:40px;background:blue;box-shadow:5px 5px 5px 5px rgba(88,88,88,0.8) inset;}
+.box-shadow3{width:100px;height:40px;background:green;box-shadow:-5px -5px 5px 5px #999;}
+.box-shadow4{width:100px;height:40px;background:yellow;box-shadow:1px 1px  #aaa,2px 2px  #aaa,3px 3px  #aaa}
+.box-shadow5{width:100px;height:40px;background:red;box-shadow:-1px -1px  #aaa,-2px -2px  #aaa,-3px -3px  #aaa;}
+.box-shadow6{width:300px;height:200px;background:#888;box-shadow:2px 2px  #777,4px 4px  #777,6px 6px  #777,8px 8px  #777,10px 10px  #777,12px 12px  #777,14px 14px  #777,16px 16px  #777,18px 18px  #777,20px 20px  #777;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#hide").click(function(){
+  $("p").hide();
+  });
+  $("#show").click(function(){
+  $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+<div class="animate1"></div>
+
+</body>
+</html>
