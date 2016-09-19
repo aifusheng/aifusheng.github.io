@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>使用JavaScript 来改变元素的不透明度</title>
+	<style>
+	*{margin:0;padding:0;}
+	body{margin:20px;}
+	img{border:1px solid black;}
+	</style>
+	<script>
+function ChangeOpacity(x)
+{
+// 返回下拉列表中被选项目的文本
+var opacity=x.options[x.selectedIndex].text;
+// 通过Id属性获取要操作的元素
+var pic=document.getElementById("pic");
+if (pic.style.opacity!==undefined)
+  {pic.style.opacity=opacity;}
+else
+  {alert("Your browser doesn't support this example!");}
+}
+	</script>
+</head>
+<body>
+<h3>改变图片的透明度</h3>
+<img id="pic" src="../../images/back.jpg"/>
+<br/>
+<select onchange="ChangeOpacity(this);" size="6">
+  <option>0</option>
+  <option>0.2</option>
+  <option>0.4</option>
+  <option >0.6</option>
+  <option>0.8</option>
+  <option>1</option>
+  </selected>
+</select>
+</body>
+</html>

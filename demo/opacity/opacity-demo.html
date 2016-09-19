@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>图像背景透明</title>
+	<style>
+	*{margin:0;padding:0;}
+body{margin:20px;}
+h3,div{margin:20px;}
+ img{opacity:0.5;}
+.opacity1{width:300px;height:300px;background:url(../../images/back.jpg);}
+.opacity1:hover{ opacity:0.5;filter:alpha(opacity=50);}
+
+.background2{width:300px;height:300px;background:url(../../images/back.jpg);border: 1px solid black;}
+.opacity2{width:200px;height:200px;background:#ffffff;border: 1px solid black;margin:30px;opacity:0.4;filter:alpha(opacity=40); }
+.opacity2 p{font-weight:bold;color:#000000;padding:2px;}
+
+.background3{width:300px;height:300px;background:url(../../images/back.jpg);border: 1px solid black;}
+.opacity3{width:200px;height:200px;background:rgba(255,255,255,0.5);border: 1px solid black;margin:30px;}
+.opacity3 p{font-weight:bold;color:#000000;padding:2px;}
+	</style>
+</head>
+<body>
+<h3>1.创建透明图像 - Hover 效果</h3>
+<div class="opacity1"></div>
+<h3>2.使用opacity创建文本在背景图像上的透明框(但是文字和背景一起被透明了)</h3>
+<div class="background2">
+<div class="opacity2">
+<p>
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+</p>
+</div>
+</div>
+<h3>3.使用rgba创建文本在背景图像上的透明框(文字正常显示，只是背景被透明了)</h3>
+<div class="background3">
+<div class="opacity3">
+<p>
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>图像背景透明</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>图像背景透明</h1>
+		<p></p>
+		<h2>图像背景透明的实现</h2>	
+		<p>先看看效果图</p>	
+		<img src="../images/opacity.png">
+		<a href="../demo/opacity/opacity-demo.html">查看演示</a>
+		<a href="../demo/opacity/opacity-demo.html.zip">下载源码</a>
+		<br/>
+		<p>要实现背景图像透明，主要是通过opacity这个属性来设置，但是使用这个有一个问题，那就是opacity后代元素会随着一起具有透明性，而RGBA不具有这样的问题。更多详细内容参考：<a href="http://www.w3cplus.com/content/css3-rgba">CSS3 RGBA </a></p>
+		<p>下面是css源代码：</p>
+		<pre data-lang="css"><code class="language-css">*{margin:0;padding:0;}
+body{margin:20px;}
+h3,div{margin:20px;}
+
+img{opacity:0.5;}
+.opacity1{width:300px;height:300px;background:url(../../images/back.jpg);}
+.opacity1:hover{ opacity:0.5;filter:alpha(opacity=50);}
+
+.background2{width:300px;height:300px;background:url(../../images/back.jpg);
+             border: 1px solid black;}
+.opacity2{width:200px;height:200px;background:#ffffff;border: 1px solid black;
+          margin:30px;opacity:0.4;filter:alpha(opacity=40); }
+.opacity2 p{font-weight:bold;color:#000000;padding:2px;}
+
+.background3{width:300px;height:300px;background:url(../../images/back.jpg);
+             border: 1px solid black;}
+.opacity3{width:200px;height:200px;background:rgba(255,255,255,0.5);
+          border: 1px solid black;margin:30px;}
+.opacity3 p{font-weight:bold;color:#000000;padding:2px;}
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>

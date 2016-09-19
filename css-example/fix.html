@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>歌曲栏目链接列表</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>歌曲栏目链接列表</h1>
+		<p>本实例为一个栏目链接列表，鼠标移动到链接所在行，链接文本颜色会改变，同时会在链接右下侧显示一个与链接相干的信息面板，信息面板中左边有一幅图片，图片右侧又有三项说明，它们分别是“歌名”、“歌手”、“介绍”。这个栏目被重定位到其它地方，效果、位置不会发生改变，全程只用CSS+DIV实现，无任何脚本。</p>	
+		<p>先看看效果图</p>	
+		<img src="../images/fix.png">
+		<a href="../demo/fix/fix-demo.html">查看演示</a>
+		<a href="../demo/fix/fix-demo.html.zip">下载源码</a>
+		<br/>
+		<p>更多详细内容参考：<a href="http://bbs.blueidea.com/thread-2733460-1-1.html">彻底弄懂CSS盒子模式五(定位强化练习)</a></p>
+		<p>下面是css源代码：</p>
+		<pre data-lang="css"><code class="language-css">*{
+	margin:0px;
+	padding:0px;
+}
+body {
+	margin:20px;
+}
+a:link,a:visited {
+	color: #666;
+	text-decoration: none;/*去除链接下划线*/
+}
+a:hover,a:active {
+	color: #F90;
+}
+
+h3 {
+	color: #FFF;
+	background-color: #F90;
+	width: 100px;
+	text-align:center;
+}
+
+ul {
+	width: 300px;
+	border-top: 1px solid #F60;/*使其上边有一线条，与标题h3吻合*/
+}
+ul li {
+	padding:5px;
+	border-bottom: 1px solid #CCC;
+	list-style:none;/*去除列表样式，这对于标准浏览器很重要*/
+}
+
+a {
+	position: relative;/*设置其定位方法为相对定位，等一下内部信息面板就可以相对它定位*/
+	display:block;/*让链接以块状呈现，这样不用点中链接文字就可以响应链接*/
+}
+a div {
+	display: none;/*初始化信息面板不显示*/
+}
+a:hover {background:#d5d5d5;}/*IE7以下版本A状态伪类bug*/
+a:hover div {
+	position: absolute;
+	padding:5px;
+	display:block;
+	width: 245px;/*只给出宽度，高让它随内容多少自动调整*/
+	left:300px;/*这是相对父级A的定位*/
+	top: 0;
+	border: 1px solid rgb(91,185,233);
+	background-color: rgb(228,246,255);
+}
+a img {
+	width:80px;
+	height:80px;
+	display:block;
+	float:left;
+}
+dl {
+	width: 160px;
+	float:right;
+	color: #999;
+	line-height:20px;
+}
+dl dd span {
+	font-weight: bold;
+	color: #639;
+}
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>
