@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>使用JavaScript显示时间日期</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>使用JavaScript显示时间日期</h1>
+		<p>给你的网页添加时间日期</p> 
+		<a href="../demo/showtime/showtime.html">查看演示</a>
+		<a href="../demo/showtime/showtime.html.zip">下载源码</a>
+		<br/>
+		<p>下面是js源代码：</p>
+		<pre data-lang="js"><code class="language-js">/*当网页全部加载完后,开始执行showTime()函数*/
+window.onload=function(){
+	showTime();
+}
+/*当时间小于10时,在前面添加个0*/
+function checkTime(i){
+	if (i<10){
+	i='0'+i;
+	}
+	return i;
+}
+function showTime(){
+	var myDate=new Date();
+	var year=myDate.getFullYear();
+	var month=myDate.getMonth();
+	var date=myDate.getDate();
+	var day=myDate.getDay();
+	var hours=myDate.getHours();
+	var minutes=myDate.getMinutes();
+	var seconds=myDate.getSeconds();
+/*为了表示星期几,创建一个数组对象*/
+	var weekday=new Array(7)
+	weekday[0]="星期日"
+	weekday[1]="星期一"
+	weekday[2]="星期二"
+	weekday[3]="星期三"
+	weekday[4]="星期四"
+	weekday[5]="星期五"
+	weekday[6]="星期六"
+	hours=checkTime(hours);
+	minutes=checkTime(minutes);
+	seconds=checkTime(seconds);
+	document.getElementById('showtime').innerHTML=year+'年'+month+'月'+date+'日'+weekday[day]+hours+':'+minutes+':'+seconds;
+/*形成递归调用,每隔500毫秒调用一次showTime()函数,从而不断刷新时间*/
+	setTimeout(showTime,500);
+}
+
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>

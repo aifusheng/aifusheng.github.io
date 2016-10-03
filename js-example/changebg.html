@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>通过更换类名来更改背景色</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>通过更换类名来更改背景色</h1>
+		<p>有的网页根据白天还是黑夜可以选择切换背景,下面来看看它的实现原理.<br/><b>实现原理:</b><br/>当点击切换背景按钮时,触发onclick事件,给onclick事件,绑定修改样式类名的函数,从而实现切换背景.</p> 
+		<a href="../demo/changebg/changebg.html">查看演示</a>
+		<a href="../demo/changebg/changebg.html.zip">下载源码</a>
+		<br/>
+		<p>下面是js源代码：</p>
+		<pre data-lang="js"><code class="language-js">var x=0;
+var bg=new Array();
+bg[0]="bg1"
+bg[1]="bg2"
+bg[2]="bg3"
+function modifyclass(){
+	x+=1
+	if (x==3){
+		x=0;
+	}
+	document.getElementById("modify").className = bg[x];
+
+}
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>

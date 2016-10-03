@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>使用JavaScript显示过年倒计时</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>使用JavaScript显示过年倒计时</h1>
+		<p>要实现JavaScript显示过年倒计时,解决思路是:<b>用结束的时间减去当前的时间</b></p> 
+		<a href="../demo/showtime/countdown1.html">查看演示</a>
+		<a href="../demo/showtime/countdown1.html.zip">下载源码</a>
+		<br/>
+		<p>下面是js源代码：</p>
+		<pre data-lang="js"><code class="language-js">/*当网页全部加载完后,开始执行showTime()函数*/
+window.onload=function(){
+showTime();
+}
+function checkTime(i){
+if (i<10){
+i='0'+i;
+}
+return i;
+}
+function showTime(){
+	/*当前时间*/
+	var currenttime=new Date();
+	/*结束时间*/
+	var endtime=new Date("2017,1,27;00:00:00");
+	var lefttime=parseInt((endtime.getTime()-currenttime.getTime())/1000);
+	var days=parseInt(lefttime/(24*60*60));
+	var hours=parseInt(lefttime/(60*60)%24);
+	var minutes=parseInt(lefttime/60%60);
+	var seconds=parseInt(lefttime%60);
+	days=checkTime(days);
+	hours=checkTime(hours);
+	minutes=checkTime(minutes);
+	seconds=checkTime(seconds);
+	document.getElementById('showtime').innerHTML="距离过年还有:"+days+"天"+hours+'小时'+minutes+'分钟'+seconds+'秒';
+	/*判断是否过年了*/
+	if (lefttime<=0){
+document.getElementById('showtime').innerHTML="啦啦啦!!!---过年了!!!";
+}
+	setTimeout(showTime,500);
+}
+</code></pre>
+	</div><!--内容结束-->
+</body>
+</html>

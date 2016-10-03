@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>通过更换类名来更改背景色</title>
+<style>
+.bg1{width:600px;padding:15px;font-size:28px;color:white;background:black;border:8px solid orange;}
+.bg2{width:600px;padding:15px;font-size:28px;color:white;background:green;border:8px solid orange;}
+.bg3{width:600px;padding:15px;font-size:28px;color:white;background:purple;border:8px solid orange;}
+.style{padding:10px 20px;font-weight:bold;font-size:20px;color:white;background:blue;box-shadow:2px 2px rgba(55,55,255,1);}
+</style>
+	<script>
+var x=0;
+var bg=new Array();
+bg[0]="bg1"
+bg[1]="bg2"
+bg[2]="bg3"
+function modifyclass(){
+	x+=1
+	if (x==3){
+		x=0;
+	}
+	document.getElementById("modify").className = bg[x];
+
+}
+
+	</script>
+</head>
+<body>
+	<h1>通过更换类名来更改背景色</h1>
+	<p id="modify" class="bg1">有的网页根据白天还是黑夜可以选择切换背景,下面来看看它的实现原理.<br/><br/>实现原理:<br/>当点击切换背景按钮时,<br/>触发onclick事件,给onclick事件,<br/>绑定修改样式类名的函数,<br/>从而实现切换背景.</p>
+	<form>
+		<input class="style" type="button" value="切换背景" onclick="modifyclass()"/>		
+	</form>
+</body>
+</html>

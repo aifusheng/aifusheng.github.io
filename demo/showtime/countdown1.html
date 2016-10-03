@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>使用JavaScript显示过年倒计时</title>
+	<script>
+window.onload=function(){
+showTime();
+}
+function checkTime(i){
+if (i<10){
+i='0'+i;
+}
+return i;
+}
+function showTime(){
+	var currenttime=new Date();
+	var endtime=new Date("2017,1,27;00:00:00");
+	var lefttime=parseInt((endtime.getTime()-currenttime.getTime())/1000);
+	var days=parseInt(lefttime/(24*60*60));
+	var hours=parseInt(lefttime/(60*60)%24);
+	var minutes=parseInt(lefttime/60%60);
+	var seconds=parseInt(lefttime%60);
+	days=checkTime(days);
+	hours=checkTime(hours);
+	minutes=checkTime(minutes);
+	seconds=checkTime(seconds);
+	document.getElementById('showtime').innerHTML="距离过年还有:"+days+"天"+hours+'小时'+minutes+'分钟'+seconds+'秒';
+	if (lefttime<=0){
+document.getElementById('showtime').innerHTML="啦啦啦!!!---过年了!!!";
+}
+	setTimeout(showTime,500);
+}
+	</script>
+<style>
+.time{padding:15px;font-size:28px;color:white;background:black;}
+</style>
+</head>
+<body>
+	<h1>使用JavaScript显示过年倒计时</h1>
+	<h1>解决思路:<br/>用结束的时间减去当前的时间</h1>
+	<p>1天=24小时 1小时=60分钟 1分钟=60秒 1秒=1000毫秒</p>
+	<div id="showtime" class="time">显示时间位置</div>
+</body>
+</html>

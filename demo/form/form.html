@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>表单验证</title>
+	<style>
+
+	</style>
+	<script>
+function validate_required(field,alerttxt)
+{
+with (field)
+	{
+	if (value == null||value == "")
+		{alert(alerttxt); return false}	
+	else {return true}
+	}
+}
+
+function validate_ form(thisform)
+{
+with (thisform)
+	{
+	if (validate_required(email,"Email must be filled out!") == false)
+		{email.focus();return false}	
+	}
+}
+
+	</script>
+</head>
+<body>
+	<h1>表单验证</h1>
+	<form action="#" onsubmit="return validate_form(this)" method="post">
+		Email: <input  type="text" name="email" size="30" placeholder="在这里输入"/>	
+		<input type="submit" value="Submit"/>		
+	</form>
+</body>
+</html>

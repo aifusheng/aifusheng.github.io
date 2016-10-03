@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>表单</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />		
+	<link rel="stylesheet" type="text/css" href="../css/prism.css" />
+	<script src="../js/prism.js"></script>
+	<style>
+	form{width:600px;}
+	form input{margin:10px;}
+	hr{margin:10px 0;}
+	</style>
+</head>
+<body>
+	<!--页头开始-->
+	<div class="header"> 
+		<ul>
+			<li class="logo_name">let's share together</li>
+			<li class="logo_slogan">学习&nbsp;探索&nbsp;分享&nbsp;————&nbsp;一种人生乐趣</li>	
+		</ul>
+	</div><!--页头结束-->
+	<div class="artical_content">
+		<h1>表单</h1>
+		<p>表单的一些名称解释:<br/>
+1.<b>form:</b>&nbsp;&nbsp;&nbsp;action:数据被传送到的地方&nbsp;&nbsp;&nbsp;method:数据传送方式<br/>
+2.<b>input:</b>type: &nbsp;&nbsp;&nbsp;text:文本框 &nbsp;&nbsp;&nbsp;password:密码框  &nbsp;&nbsp;&nbsp;name:文本框的名字,为了被后台程序使用 &nbsp;&nbsp;&nbsp;value:文本框的值,也就是需要传送到服务器的值<br/>
+3.<b>textarea:</b> &nbsp;&nbsp;&nbsp;cols:行数 &nbsp;&nbsp;&nbsp;rows:列数 <br/>
+4.<b>单选框 复选框:</b> type:&nbsp;radio &nbsp;checkbox &nbsp;&nbsp;&nbsp;value和name和前面一样 &nbsp;&nbsp;&nbsp;checked="checked"表示默认选中<br/>
+5.<b>下拉列表:</b> &nbsp;&nbsp;&nbsp;select &nbsp;&nbsp;&nbsp;option &nbsp;&nbsp;&nbsp;selected="selected"表示默认选中 &nbsp;&nbsp;&nbsp;value提交值 <br/>
+6.<b>select:</b> &nbsp;&nbsp;&nbsp;multiple="multiple"下拉列表框可以进行多选<br/>
+7.<b>input:</b> &nbsp;&nbsp;&nbsp;submit:提交 &nbsp;&nbsp;&nbsp;reset:重置 &nbsp;&nbsp;&nbsp;button:没有实际作用 &nbsp;&nbsp;&nbsp;value:按钮上显示的字<br/>
+8.<b>标签:</b> &nbsp;&nbsp;&nbsp;&lt;label for="控件id名称"&gt;&lt;/label&gt; 点击标签就可以选中相关联的标签<br/>
+9.<b>边框和标题:</b>&lt;fieldset&gt;&lt;/fieldset&gt;&nbsp;&nbsp;&nbsp; &lt;legend&gt;标题&lt;/legend&gt;,形成分块的作用<br/><p><hr/>
+		<form>
+			文本输入框:<br/><input type="text" value="这是文本输入框"><br/>在这可以填入你的姓名,账号<br/><hr/>
+			密码输入框:<br/><input type="password" value="这是密码输入框"><br/>在这可以填入你的密码,不被别人看见<br/><hr/>
+			文本域:<br/><textarea rows="5" cols="20">在这里输入内容...</textarea><br/><br/><hr/>
+			提交按钮:<br/><input type="submit" value="提交"><br/><hr/>
+			重置按钮:<br/><input type="reset" value="重置"><br/><hr/>
+			一般按钮:<br/><input type="button" value="按钮"><br/>一般得和事件绑定<hr/>
+			单选框:<br/>你的性别?<br/><input type="radio" name="sex" value="male" >male<br/>
+				   <input type="radio" name="sex" value="female" checked="checked"> female<br/><hr/>
+			复选框:<br/>你喜欢的运动?<br/><input type="checkbox" name="c1" value="打球" >打球<br/>
+					<input type="checkbox" name="c2" value="跑步" >跑步<br/>
+				   <input type="checkbox" name="c3" value="登山"> 登山<br/><hr/>
+			下拉列表:<br/>
+					<select>
+					  <option value="10">10</option>
+					  <option value="20" selected="selected">20</option>
+					  <option value="30">30</option>
+					</select><br/><hr/>
+			下拉列表框:<br/>
+					<select multiple="multiple">
+					  <option value="10">10</option>
+					  <option value="20" selected="selected">20</option>
+					  <option value="30">30</option>
+					  <option value="40">40</option>
+					  <option value="50">50</option>
+					  <option value="60">60</option>						
+					</select><br/><hr/>
+			边框和标题:<fieldset>
+					<legend>个人信息</legend>
+					<label for="age"><em>*</em>Age</label>
+					<input id="age"><br>
+					<label for="gender">Gender</label>
+					<select id="gender">
+					  <option value="female">Female</option>
+					  <option value="male">Male</option>
+					</select>
+				</fieldset>
+		</form>
+	</div><!--内容结束-->
+</body>
+</html>
